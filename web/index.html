@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Portfolio Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div><p class="eyebrow">CODEALPHA · PYTHON PROJECT</p><h1>Portfolio Tracker</h1><p class="sub">Track holdings from transaction history.</p></div><button id="resetBtn" class="ghost">Reset demo</button></header>
+<main>
+<section class="metrics" id="metrics"></section>
+<section class="grid">
+  <div class="panel">
+    <div class="panel-head"><h2>Add transaction</h2><span>Demo prices are fixed</span></div>
+    <form id="txForm">
+      <label>Type<select id="type"><option>BUY</option><option>SELL</option></select></label>
+      <label>Ticker<select id="ticker"></select></label>
+      <label>Quantity<input id="quantity" type="number" min="1" step="1" value="1"></label>
+      <label>Price<input id="price" type="number" min="0.01" step="0.01" value="3000"></label>
+      <button class="primary" type="submit">Add transaction</button>
+      <p id="message" class="message"></p>
+    </form>
+  </div>
+  <div class="panel explanation"><h2>How it works</h2><ol><li>Transactions are validated.</li><li>Python applies BUY/SELL rules.</li><li>Holdings are reconstructed from history.</li><li>Portfolio metrics are derived from the resulting state.</li></ol><p class="note">The GitHub Pages demo is a lightweight browser presentation layer. The canonical implementation is the Python package in <code>portfolio_tracker/</code>.</p></div>
+</section>
+<section class="panel"><div class="panel-head"><h2>Holdings</h2><span id="count"></span></div><div class="table-wrap"><table><thead><tr><th>Stock</th><th>Qty</th><th>Avg cost</th><th>Current</th><th>Value</th><th>P/L</th><th>Return</th><th>Allocation</th></tr></thead><tbody id="holdings"></tbody></table></div></section>
+</main>
+<script src="app.js"></script>
+</body></html>

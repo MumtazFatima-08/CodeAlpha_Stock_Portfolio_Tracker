@@ -1,0 +1,5 @@
+ticker,transaction_type,quantity,price,transaction_date
+TCS,BUY,10,3000,2026-09-10
+TCS,BUY,5,3200,2026-09-11
+INFY,BUY,8,1500,2026-09-12
+TCS,SELL,4,3500,2026-09-13
